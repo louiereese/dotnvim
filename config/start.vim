@@ -10,6 +10,14 @@ endif
 
 call plug#begin('$HOME/.config/nvim/.plugged')
 
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" let g:deoplete#enable_at_startup = 1
 
 "" PlPlPlugin:
 Plug 'bounceme/poppy.vim'            " rainbows for parentheses
@@ -34,7 +42,7 @@ Plug 'w0rp/ale', {'do': 'npm install -g standard'} " linting
 
 "" IdIDE:
 " Plug 'majutsushi/tagbar'
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 " Plug 'craigemery/vim-autotag'
 " Plug 'shougo/echodoc.vim'
 " Plug 'sirver/ultisnips'
