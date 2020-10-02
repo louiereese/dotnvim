@@ -4,6 +4,7 @@
 
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
+let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_fix_on_save = 1
 
@@ -45,6 +46,8 @@ endfunction
 " Might not need an explicit setting for tsserver
 "
 " @see: https://github.com/w0rp/ale/issues/20#issuecomment-298776249
+" 
+"
 if CheckForEslint()
   let g:ale_linters = {
   \   'javascript': ['eslint'],
@@ -53,7 +56,7 @@ if CheckForEslint()
 
   let g:ale_fixers = {
   \   'javascript': ['eslint'],
-  \   'typescript': ['tslint'],
+  \   'typescript': ['eslint'],
   \ }
 else
   let g:ale_linters = {

@@ -10,14 +10,14 @@ endif
 
 call plug#begin('$HOME/.config/nvim/.plugged')
 
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" let g:deoplete#enable_at_startup = 1
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 "" PlPlPlugin:
 Plug 'bounceme/poppy.vim'            " rainbows for parentheses
@@ -79,8 +79,9 @@ Plug 'peitalin/vim-jsx-typescript'
 " Plug 'FrigoEU/psc-ide-vim/',   {'for': 'purescript'}
 
 "" CsCss:
-" Plug 'othree/csscomplete.vim'
-" Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
+Plug 'othree/csscomplete.vim'
+Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
+Plug 'chrisbra/Colorizer'
 
 "" OtOtOther: Etc.
 " Plug 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
